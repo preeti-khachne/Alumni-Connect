@@ -1,30 +1,59 @@
-# Spin up the dev Container
+### Project Setup Guide
 ```
-docker run -it -v .:/app -p 5173:5173 --workdir /app --entrypoint ash --name frontend node:22-alpine
+git clone git@github.com:preeti-khachne/Alumni-Connect.git -b dev frontend
 ```
 
+###### Step 1
+```
+cd frontend
+```
+
+###### Step 2
 ```
 npm i
 ```
 
-##### Start development
+###### Step 3
+- Rename `.env.local.example` -> `.env.local` and provide environment variables
+
+###### Step 4
 ```
-docker start frontend
-docker exec -it frontend ash
+npm run dev
 ```
+
+### If you face any issue in the last command then delete `node_modules/` and spin up the development Container by following steps:
+
+###### Step 1
+```
+docker run -it -v .:/app -p 5173:5173 --workdir /app --entrypoint ash --name frontend node:22-alpine
+```
+
+###### Step 2
+```
+npm i
+```
+
+###### Step 3
 ```
 npm run dev --host
 ```
 
-# React + Vite
+###### Restart development Container
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+###### Step 1
+```
+docker start frontend
+docker exec -it frontend ash
+```
 
-Currently, two official plugins are available:
+###### Step 2
+```
+npm run dev --host
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+##### Devlopment URL's
+- [backend](http://localhost:8000)
+- [frontend](http://localhost:5173)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Backend Repo [URL](https://github.com/Pawan0516/Alumni_Connect)
