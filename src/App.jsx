@@ -25,6 +25,7 @@ import Layout from "./screens/Layout";
 // import InterviewScreen from "./screens/InterviewScreen";
 import { sendAnalytics } from "./utils/firebase";
 import logger from "./utils/logger";
+import OnboardScreen from "./screens/OnboardScreen.jsx";
 // import JobDetailsScreen from "./screens/JobDetailsScreen";
 // import JobsScreen from "./screens/JobsScreen";
 // import ProblemsScreen from "./screens/ProblemsScreen";
@@ -63,6 +64,10 @@ export default function App() {
       <Routes>
         {/* Public Routes */}
         <Route path="/" element={<Layout element={<HomeScreen />} />} />
+        <Route
+          path="/onboard"
+          element={<OnboardScreen />}
+        />
         {/* <Route path="/about" element={<Layout element={<AboutScreen />} />} />
         <Route
           path="/contact"
