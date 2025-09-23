@@ -22,7 +22,7 @@ export default function Footer() {
             <div className="space-y-4">
               <Button size="lg" className="w-full bg-accent hover:bg-accent/90 text-white">
                 Request Demo
-                <to className="w-4 h-4 ml-2" />
+                <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
               <Button size="lg" variant="outline" className="w-full border-white/30 hover:text-white hover:bg-white/10">
                 Contact Sales
